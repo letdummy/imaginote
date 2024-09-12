@@ -94,17 +94,41 @@ textarea::placeholder {
   cursor: pointer;
 }
 
+.search-box {
+  margin: 0 auto;
+  max-width: 32.25rem; 
+  margin-bottom: 3rem; 
+  padding: 0.5rem;
+  border-bottom: 0.0625rem solid #aaa; 
+  text-align: center;
+}
+
+.search-box input {
+  display: block;
+  width: 100%;
+  padding: 0.5rem; 
+  border: 0.0625rem solid #aaa; 
+  border-radius: 0.25rem; 
+  font-family: Quicksand, sans-serif;
+  color: white;
+  background-color: transparent;
+  box-sizing: border-box; 
+}
+
 .notes-list {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: minmax(min-content, max-content);
   gap: 16px;
-  margin-bottom: 48px;
+  margin-bottom: 1rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
 .notes-list__empty-message {
   text-align: center;
   color: #aaa;
+  margin-bottom: 10rem;
 }
 
 .note-item {
@@ -130,6 +154,7 @@ textarea::placeholder {
 .note-item__date {
   font-size: 12px;
   margin-bottom: 8px;
+  margin-top: 0.5rem;
   color: #aaa;
 }
 
@@ -177,18 +202,18 @@ textarea::placeholder {
   }
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 900px) {
   .notes-list {
     grid-template-columns: repeat(3, 1fr);
-  }
-
-  .note-search input {
-    min-width: 400px;
+    margin-left: 5rem;
+    margin-right: 5rem;
   }
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1200px) {
   .notes-list {
     grid-template-columns: repeat(4, 1fr);
+    margin-left: 10rem;
+    margin-right: 10rem;
   }
 }

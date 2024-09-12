@@ -2,7 +2,7 @@ import React from 'react';
 import { getInitialData } from '../utils';
 import NoteHeader from './NoteHeader';
 import NoteInput from './NoteInput';
-import NoteList from './NoteList';
+import NoteSearch from './NoteSearch';
 
 class NoteApp extends React.Component {
     constructor(props) {
@@ -40,7 +40,7 @@ class NoteApp extends React.Component {
             <>
                 <NoteHeader />
                 <NoteInput onAddHandler={this.onAddHandler} />
-                <NoteList notes={this.state.notes} onDelete={this.onDeleteHandler} />
+                <NoteSearch notes={this.state.notes} onDelete={this.onDeleteHandler} />
             </>
         );
     }
