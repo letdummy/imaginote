@@ -8,6 +8,7 @@ body {
   font-family: Quicksand, sans-serif;
   background-color: #202124;
   color: white;
+  overflow-x: hidden;
 }
 
 input,
@@ -57,7 +58,7 @@ textarea::placeholder {
 
 .note-section__title {
   text-align: center;
-  margin: 3rem 0rem;
+  margin: 0rem 0rem 3rem 0rem;
 }
 
 .note-input {
@@ -114,7 +115,7 @@ textarea::placeholder {
   grid-template-columns: 1fr;
   grid-template-rows: minmax(min-content, max-content);
   gap: 16px;
-  margin-bottom: 1rem;
+  margin-bottom: 4rem;
   margin-left: 2rem;
   margin-right: 2rem;
 }
@@ -125,9 +126,19 @@ textarea::placeholder {
   margin-bottom: 10rem;
 }
 
+.pin-icon {
+  position: absolute;
+  top: 0.5rem; 
+  right: 0.5rem; 
+  width: 24px; 
+  height: 24px; 
+  cursor: pointer;
+}
+
 .note-item {
-  border: 1px solid #aaa;
-  border-radius: 4px;
+  position: relative;
+  border: 0.0625rem solid #aaa;
+  border-radius: 0.25rem;
   overflow: hidden;
   display: flex;
   flex-direction: column;

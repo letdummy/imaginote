@@ -29,6 +29,17 @@ class NoteApp extends React.Component {
         }));
     }
 
+    // pin/unpin note by id
+    onPinnedHandler = (id) => {
+        const notes = this.state.notes.map((note) => {
+            if (note.id === id) {
+                return { ...note, pinned: !note.pinned };
+            }
+            return note;
+        });
+        this.setState({ notes });
+    }
+
     // delete note by id
     onDeleteHandler = (id) => {
         const notes = this.state.notes.filter((note) => note.id !== id);
@@ -62,7 +73,7 @@ class NoteApp extends React.Component {
             <>
                 <NoteHeader />
                 <NoteInput onAddHandler={this.onAddHandler} />
-                <NoteSearch notes={this.state.notes} onDelete={this.onDeleteHandler} onArchive={this.onArchiveHandler} onUnarchive={this.onUnarchiveHandler} />
+                <NoteSearch notes={this.state.notes} onDelete={this.onDeleteHandler} onArchive={this.onArchiveHandler} onUnarchive={this.onUnarchiveHandler} onPinned={this.onPinnedHandler} />
             </>
         );
     }

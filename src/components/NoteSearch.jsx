@@ -4,7 +4,7 @@ import NoteSearchInput from './NoteSearchInput';
 import NoteList from "./NoteList";
 import NoteListArchived from "./NoteListArchived";
 
-function NoteSearch({ notes, onDelete, onArchive, onUnarchive }) {
+function NoteSearch({ notes, onDelete, onArchive, onUnarchive, onPinned }) {
     const [searchTerm, setSearchTerm] = useState("");
 
     // pass a function to the child component to update the search term
@@ -22,8 +22,8 @@ function NoteSearch({ notes, onDelete, onArchive, onUnarchive }) {
     return (
         <div className="note-app">
             <NoteSearchInput onSearch={onSearchHanlder} />
-            <NoteList notes={unarchivedNotes} onDelete={onDelete} onArchive={onArchive} onUnarchive={onUnarchive} />
-            <NoteListArchived notes={archivedNotes} onDelete={onDelete} onArchive={onArchive} onUnarchive={onUnarchive} />
+            <NoteList notes={unarchivedNotes} onDelete={onDelete} onArchive={onArchive} onUnarchive={onUnarchive} onPinned={onPinned} />
+            <NoteListArchived notes={archivedNotes} onDelete={onDelete} onArchive={onArchive} onUnarchive={onUnarchive} onPinned={onPinned} />
         </div>
 
     );
