@@ -13,7 +13,7 @@ function NoteItem({ note, onDelete, onArchive, onUnarchive, onPinned }) {
             <NoteActions
                 note={note}
                 onDelete={onDelete}
-                onArchive={onArchive} 
+                onArchive={onArchive}
                 onUnarchive={onUnarchive}
             />
         </div>

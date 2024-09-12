@@ -36,6 +36,21 @@ textarea::placeholder {
   border-bottom: 1px solid #aaa;
 }
 
+.note-app__footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem 2rem;
+  border-top: 1px solid #aaa;
+  margin-top: 5rem;
+}
+
+.note-app__footer a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #656ffd;
+}
+
 .note-app__header h1 {
   margin: 8px 0;
   flex: 1;
@@ -58,7 +73,7 @@ textarea::placeholder {
 
 .note-section__title {
   text-align: center;
-  margin: 0rem 0rem 3rem 0rem;
+  margin: 4rem 0rem 3rem 0rem;
 }
 
 .note-input {
@@ -115,7 +130,7 @@ textarea::placeholder {
   grid-template-columns: 1fr;
   grid-template-rows: minmax(min-content, max-content);
   gap: 16px;
-  margin-bottom: 4rem;
+  margin-bottom: 1.25rem;
   margin-left: 2rem;
   margin-right: 2rem;
 }

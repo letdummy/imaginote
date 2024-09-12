@@ -22,8 +22,8 @@ function NoteSearch({ notes, onDelete, onArchive, onUnarchive, onPinned }) {
     return (
         <div className="note-app">
             <NoteSearchInput onSearch={onSearchHanlder} />
-            <NoteList notes={unarchivedNotes} onDelete={onDelete} onArchive={onArchive} onUnarchive={onUnarchive} onPinned={onPinned} />
-            <NoteListArchived notes={archivedNotes} onDelete={onDelete} onArchive={onArchive} onUnarchive={onUnarchive} onPinned={onPinned} />
+            <NoteList notes={unarchivedNotes} onDelete={onDelete} onArchive={onArchive} onPinned={onPinned} />
+            <NoteListArchived notes={archivedNotes} onDelete={onDelete} onUnarchive={onUnarchive} onPinned={onPinned} />
         </div>
 
     );
