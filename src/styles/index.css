@@ -44,13 +44,18 @@ textarea::placeholder {
 
 .note-app__body {
   max-width: 1000px;
-  margin: 16px auto;
-  padding: 12px;
+  margin: 16px auto 0px;
+  padding: 12px 12px 0px 12px;
 }
 
 .note-app__body h2 {
   font-weight: normal;
   margin: 16px 0;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.note-section__title {
   text-align: center;
   margin-bottom: 2rem;
 }
