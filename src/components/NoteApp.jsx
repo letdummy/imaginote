@@ -1,5 +1,6 @@
 import React from 'react';
 import { getInitialData } from '../utils';
+import NoteHeader from './NoteHeader';
 import NoteInput from './NoteInput';
 import NoteList from './NoteList';
 
@@ -12,6 +13,7 @@ class NoteApp extends React.Component {
         };
     }
 
+    // Add a new note with the given title and body
     onAddHandler = (title, body) => {
         const newNote = {
             id: Date.now(),
@@ -27,6 +29,7 @@ class NoteApp extends React.Component {
         }));
     }
 
+    // delete note by id
     onDeleteHandler = (id) => {
         const notes = this.state.notes.filter((note) => note.id !== id);
         this.setState({ notes });
@@ -35,9 +38,7 @@ class NoteApp extends React.Component {
     render() {
         return (
             <>
-                <div className="note-app__header">
-                    <h1>Imaginote</h1>
-                </div>
+                <NoteHeader />
                 <NoteInput onAddHandler={this.onAddHandler} />
                 <NoteList notes={this.state.notes} onDelete={this.onDeleteHandler} />
             </>
