@@ -1,7 +1,7 @@
 import React from 'react';
 import { getInitialData } from '../utils';
-import NoteItem from './NoteItem';
 import NoteInput from './NoteInput';
+import NoteList from './NoteList';
 
 class NoteApp extends React.Component {
     constructor(props) {
@@ -39,11 +39,7 @@ class NoteApp extends React.Component {
                     <h1>Imaginote</h1>
                 </div>
                 <NoteInput onAddHandler={this.onAddHandler} />
-                <div className="notes-list">
-                    {this.state.notes.map((note) => (
-                        <NoteItem key={note.id} note={note} onDelete={this.onDeleteHandler} />
-                    ))}
-                </div>
+                <NoteList notes={this.state.notes} onDelete={this.onDeleteHandler} />
             </>
         );
     }
