@@ -3,12 +3,12 @@ import NoteListHeader from './NoteListHeader';
 import NoteItem from './NoteItem';
 import NoteListEmpty from './NoteListEmpty';
 
-function NoteList({ notes, onDelete, onArchive, onUnarchive }) {
+function NoteListArchived({ notes, onDelete, onArchive, onUnarchive }) {
     return (
         <>
-            <NoteListHeader title="Active Notes" subtitle="Looking for something important? Check out your active notes!" />
+            <NoteListHeader title="Archived Notes" subtitle="Looking for something archived??" />
             {notes.length === 0 ? (
-                <NoteListEmpty text="No notes available. Let's add some!" />
+                <NoteListEmpty text="No notes are archived." />
             ) : (
             <div className="notes-list">
                 {notes.map((note) => (
@@ -21,4 +21,4 @@ function NoteList({ notes, onDelete, onArchive, onUnarchive }) {
     );
 }
 
-export default NoteList;
+export default NoteListArchived;
