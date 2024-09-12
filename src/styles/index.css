@@ -86,6 +86,7 @@ textarea::placeholder {
 .note-input textarea,
 .search-box input {
   display: block;
+  resize: vertical;
   width: 100%;
 }
 
